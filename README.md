@@ -2,9 +2,17 @@
 
 This project is simple git user search.
 
-## Development server
+## Run the app
 
-Run `npm install` and `npm start` for a dev server. Navigate to `http://localhost:4000/`. The app will automatically reload if you change any of the source files. Most welcome if you run with `ng serve`
+Clone or download this repo. Go inside the `gitsearch-master` and open `dist` folder and open cmd in this folder. Start typing `npm install` and `npm start`. Navigate to `http://localhost:4000/` in your browser (Chrome is preferable) 
+
+## Do you want debug and code review?
+
+Need to install `angular-cli` from https://cli.angular.io/. Go inside the `gitsearch-master` by cmd and type `npm install` and `ng-start`. The app will automatically reload if you change any of the source files. 
+
+## Do you want just read the code?
+
+Just go `gitsearch-master` by explorer, go to `src` folder where the original code available.
 
 ## Random color generator code
 
@@ -25,3 +33,5 @@ Chart screen
 
 Error screen
 ![ScreenShot](https://raw.githubusercontent.com/vaasung/gitsearch/master/trash/screebshot/error-min.jpg)
+
+Contact me if you have any questions @ vaasung@gmail.com
