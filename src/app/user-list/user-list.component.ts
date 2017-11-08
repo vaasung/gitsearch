@@ -29,9 +29,7 @@ export class UserListComponent implements OnInit {
     this.getGitUserRepo(userData.repos_url)
   }
 
-  gitReposSuccess(reposData) {
-    this.repos = reposData
-  }
+  gitReposSuccess(reposData) { this.repos = reposData }
 
   percentageCalc(total, perc) {
     total.forEach(val => { this.totalArray += val; return false })
