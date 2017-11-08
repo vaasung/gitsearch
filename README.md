@@ -1,27 +1,27 @@
-# GitUserSearch
+# Git User Search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.5.
+This project is simple git user search.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm install` and `npm start` for a dev server. Navigate to `http://localhost:4000/`. The app will automatically reload if you change any of the source files. Most welcome if you run with `ng serve`
 
-## Code scaffolding
+## Random color generator code
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This code taken help from stackoverflow
 
-## Build
+## Screenshots
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Check the app screenshots
 
-## Running unit tests
+Home screen
+![ScreenShot](https://raw.githubusercontent.com/vaasung/gitsearch/master/trash/screebshot/homeScreen-min.jpg)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Search screen
+![ScreenShot](https://raw.githubusercontent.com/vaasung/gitsearch/master/trash/screebshot/searched-min.jpg)
 
-## Running end-to-end tests
+Chart screen
+![ScreenShot](https://raw.githubusercontent.com/vaasung/gitsearch/master/trash/screebshot/chartview-min.jpg)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Error screen
+![ScreenShot](https://raw.githubusercontent.com/vaasung/gitsearch/master/trash/screebshot/error-min.jpg)
