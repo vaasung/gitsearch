@@ -165,19 +165,11 @@ var GitService = (function () {
         this.API_URL = __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].GIT_API_URL;
         this.CLIENT_ID = __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].GIT_CLIENT_ID;
         this.CLIENT_SEC = __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].GIT_CLIENT_SECRET;
-        // private GIT_USER_URL: string = this.API_URL + this.API_KEY + '&q='
         this.GIT_USER_URL = this.API_URL;
     }
-    GitService.prototype.getGitUser = function (query) {
-        return this._http.get(this.GIT_USER_URL + query + '?client_id=' + this.CLIENT_ID + '&client_secret=' + this.CLIENT_SEC).map(function (res) { return res.json(); });
-        // return this._http.get( this.GIT_USER_URL + query + this.perPage  ).map( res => res.json() )
-    };
-    GitService.prototype.getGitUserRepo = function (url) {
-        return this._http.get(url).map(function (res) { return res.json(); });
-    };
-    GitService.prototype.getGitLan = function (url) {
-        return this._http.get(url).map(function (res) { return res.json(); });
-    };
+    GitService.prototype.getGitUser = function (query) { return this._http.get(this.GIT_USER_URL + query + '?client_id=' + this.CLIENT_ID + '&client_secret=' + this.CLIENT_SEC).map(function (res) { return res.json(); }); };
+    GitService.prototype.getGitUserRepo = function (url) { return this._http.get(url + '?client_id=' + this.CLIENT_ID + '&client_secret=' + this.CLIENT_SEC).map(function (res) { return res.json(); }); };
+    GitService.prototype.getGitLan = function (url) { return this._http.get(url + '?client_id=' + this.CLIENT_ID + '&client_secret=' + this.CLIENT_SEC).map(function (res) { return res.json(); }); };
     return GitService;
 }());
 GitService = __decorate([
@@ -249,9 +241,7 @@ var UserListComponent = (function () {
         this.searching = false;
         this.getGitUserRepo(userData.repos_url);
     };
-    UserListComponent.prototype.gitReposSuccess = function (reposData) {
-        this.repos = reposData;
-    };
+    UserListComponent.prototype.gitReposSuccess = function (reposData) { this.repos = reposData; };
     UserListComponent.prototype.percentageCalc = function (total, perc) {
         var _this = this;
         total.forEach(function (val) { _this.totalArray += val; return false; });
