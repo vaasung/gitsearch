@@ -6,11 +6,11 @@ This project is simple git user search.
 
 Clone or download this repo. Go inside the `gitsearch-master` and open `dist` folder and open cmd in this folder. Start typing `npm install` and `npm start`. Navigate to `http://localhost:4000/` in your browser (Chrome is preferable) 
 
-## Do you want debug and code review?
+##  Run app in dev mode
 
 Need to install `angular-cli` from https://cli.angular.io/. Go inside the `gitsearch-master` by cmd and type `npm install` and `ng-start`. The app will automatically reload if you change any of the source files. 
 
-## Do you want just read the code?
+##  Debug and code review?
 
 Just go `gitsearch-master` by explorer, go to `src` folder where the original code available.
 
