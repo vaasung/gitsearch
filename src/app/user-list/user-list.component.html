@@ -1,0 +1,50 @@
+<div class="gitBox">
+    <div class="formBox">
+        <input type='text' [(ngModel)]="q" (keyup.enter)="searchUsers(q)" class='search' placeholder='... Search' autofocus>
+        <button class="{{searching ? 'anim': ''}}" (click)="searchUsers(q)">➡️</button>
+    </div>
+    <div class="resultBox">
+        <div *ngIf="users">
+            <div class="left">
+                <img src="{{users.avatar_url}}" alt="{{users.name}}" title="{{users.name}}">
+                <p>{{users.name !== null ? users.name : 'Name not shown'}}</p>
+                <a href="{{users.html_url}}" target="_blank">{{users.html_url}}</a>
+            </div>
+            <div class="right">
+                <div *ngIf="repos">
+                    <div *ngFor="let repo of repos; let i = index">
+                        <div *ngIf="i<5">
+                            <p class="repo" (click)="getGitUserRepoLang(repo.languages_url)">{{repo.name}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SVG HERE -->
+            <div class="svg {{svgTrue ? 'show' : ''}}">
+                <div *ngIf="svgTrue === true">
+
+                    <div class="exit" (click)="svgTrue = false; noLang = false">✖️</div>
+                    <div class="tooltip {{moved ? 'moving' : ''}}">
+                        <p>{{langName}}
+                            <span>{{percentage}}%</span>
+                        </p>
+                    </div>
+                    <div *ngIf="svgTrue">
+                        <div class="svgTag">
+                            <h1 class="titleChart">
+                                <!-- {{repo.name}}... -->
+                                
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="noLang" class="noLang">
+                    <p>... ! Seems no code in this REPO !!..
+                        <br/>
+                        <br/>try anohter.</p>
+                    <h1>🌈</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
