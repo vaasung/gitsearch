@@ -34,4 +34,3 @@ Chart screen
 Error screen
 ![ScreenShot](https://raw.githubusercontent.com/vaasung/gitsearch/master/trash/screebshot/error-min.jpg)
 
-Contact me if you have any questions @ vaasung@gmail.com
